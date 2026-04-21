@@ -62,8 +62,6 @@ int main()
 
 	CellGroup board = GenerateCellGroup();
 
-	
-
 	std::cout << board.ToString();
 
 }
