@@ -1,14 +1,13 @@
 ﻿#include <iostream>
 #include <vector>
 #include <cstdlib>	
-#include <ctime>   
-#include "String"
+#include <ctime>
 
 #define GAME_DIFF 6
 
 struct CellGroup {
 private:
-	int cellData[9][9];
+	int cellData[9][9] = {};
 
 public:
 	int GetData(const int& X, const int& Y) {
