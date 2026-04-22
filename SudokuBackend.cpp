@@ -3,6 +3,7 @@
 #include <cstdlib>	
 #include <ctime>
 
+#include "SudokuBackend.h"
 #define GAME_DIFF 6
 
 struct CellGroup {
@@ -21,11 +22,11 @@ public:
 	std::string ToString() {
 		std::string out; 
 
-		for (size_t Y = 0; Y < 9; Y++)
+		for (auto & Y : cellData)
 		{
-			for (size_t X = 0; X < 9; X++)
+			for (int X : Y)
 			{
-				out += std::to_string(cellData[Y][X]);
+				out += std::to_string(X);
 			}
 
 			out += "\n";
@@ -34,6 +35,15 @@ public:
 		return out;
 	}
 };
+
+int ::CellGroup::GetData(const int &X, const int &Y) {
+}
+
+void ::CellGroup::SetData(const int &X, const int &Y, int data) {
+}
+
+std::string ::CellGroup::ToString() {
+}
 
 CellGroup GenerateCellGroup() {
 	CellGroup group;
@@ -49,19 +59,5 @@ CellGroup GenerateCellGroup() {
 	}
 
 	return group;
-}
-
-
-
-int main()
-{
-	std::srand(std::time(0));
-
-	std::cout << std::rand() % 9 << "\n";
-
-	CellGroup board = GenerateCellGroup();
-
-	std::cout << board.ToString();
-
 }
 

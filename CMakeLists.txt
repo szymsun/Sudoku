@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 26)
 
 add_executable(Sudoku main.cpp
         SudokuBackend.cpp
-        frontend.cpp)
+        SudokuBackend.h
+        frontend.cpp
+        frontend.h)
